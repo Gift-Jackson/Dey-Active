@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="/index.html">
+            <h2>Active</h3>
+                <span class="material-symbols-outlined highlight">check</span>
+        </a>
+
+        <div class="right-header">
+            <a class="nav-link" href="#">
+                <span class="material-symbols-outlined">group</span>
+                <span class="extended-text">Join Community</span>
+            </a>
+            <a class="nav-link top-nav hide" href="#">
+                <span class="material-symbols-outlined">leaderboard</span>
+                <span class="extended-text">Leaderboard</span>
+            </a>
+            <buton class="logout-btn btn hide" id="signOutButton">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="extended-text">Logout</span>
+                </button>
+        </div>
+    </header>
+
+    <section id="registerSection">
+        <main>
+            <div class="content">
+                <div class="hero">
+                    <h1 class="animate">&#128640;</h1>
+                    <h1>Join Other Techies, <br> Dey Active!</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore eligendi placeat autem totam
+                        quas
+                        nihil!</p>
+                    <button class="btn" id="signInButton">
+                        <img src="assets/google_icon.svg" alt="google_icon">
+                        <span>Continue with Google!</span>
+                    </button>
+                </div>
+
+                <div class="container">
+                    <marquee behavior="alternate" direction="right" scrollamount="3"><h2>Who is this platform for? 💁‍♂️</h2></marquee>
+
+                    <div class="boxes">
+                        <a href="#">
+                            <div class="box box-1">
+                                <span class="material-symbols-outlined">draw</span>
+                                <h4>Designers</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="box box-2">
+                                <span class="material-symbols-outlined">code</span>
+                                <h4>Developers</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="box box-3">
+                                <span class="material-symbols-outlined">edit-note</span>
+                                <h4>Content Writers</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="box box-4">
+                                <span class="material-symbols-outlined">more</span>
+                                <h4>And Others...</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <section id="dashboardSection" class="hide">
+        <main>
+            <div class="content">
+                <div class="profile-container">
+                    <div class="user-img-container">
+                        <img id="userProfilePicture" src="assets/github_octocat.png" alt="User_Avatar" id="avatar">
+                    </div>
+                    <div class="user-info">
+                        <h3 id="userName">John Doe</h3>
+                        <p class="email-display" id="userEmail">johdoe@gmail.com</p>
+                        <p class="select-role-container"><small class="role">Developer</small><span
+                                class="material-symbols-outlined edit-role">edit</span></p>
+                    </div>
+                </div>
+
+                <div class="desc-container">
+                    <p id="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium a illo ad reprehenderit quibusdam dolorum tempora iste reiciendis consequatur eos.</p>
+                </div>
+
+                <div class="boxes">
+                    <a href="#">
+                        <div class="box box-1">
+                            <span class="material-symbols-outlined">folder_open</span>
+                            <h4>My projects</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="box box-2">
+                            <span class="material-symbols-outlined">checklist</span>
+                            <h4>My task list</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="box box-3">
+                            <span class="material-symbols-outlined">call</span>
+                            <h4>Start a call</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="box box-4">
+                            <span class="material-symbols-outlined">video_call</span>
+                            <h4>Join a room</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <footer>
+        <p><small>Tech Watch Community &copy; 2023</small></p>
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script src="main.js"></script> -->
+    <script src="auth.js" type="module"></script>
+</body>
+
+</html>
