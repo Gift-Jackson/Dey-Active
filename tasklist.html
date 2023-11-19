@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active | Tasklist</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- MATERIAL ICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="/index.html">
+            <h2 contenteditable="true">Active</h3>
+                <span class="material-symbols-outlined highlight">check</span>
+        </a>
+
+        <div class="right-header">
+            <a class="nav-link" href="https://chat.whatsapp.com/DEiTovpA8JR64E4VkTrO1B">
+                <span class="material-symbols-outlined">group</span>
+                <span class="extended-text">Join Community</span>
+            </a>
+            <a class="nav-link top-nav hide" href="leaderboard.html">
+                <span class="material-symbols-outlined">leaderboard</span>
+                <span class="extended-text">Leaderboard</span>
+            </a>
+            <buton class="logout-btn btn hide" id="signOutButton">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="extended-text">Logout</span>
+                </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="page-container">
+                <div class="page-header">
+                    <a class="back-btn" href="index.html">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        <!-- <span>Back</span> -->
+                    </a>
+                    <h2>My Tasklist</h2>
+                </div>
+
+                <div id="displayFormBtn">
+                    <span class="material-symbols-outlined">add</span>
+                    <span class="extended-text">Add a task</span>
+                </div>
+
+                <div id="tasks">
+                    <div class="task-box">
+                        <div class="task-info">
+                            <h3 class="task-title">Task Title</h3>
+                            <p class="task-date">17-10-2023</p>
+                            <p class="task-description">This is a task description.</p>
+                        </div>
+
+                        <div class="action-btns">
+                            <button class="completedBtn btn-flex">
+                                <span class="material-symbols-outlined">check</span>
+                            </button>
+                            <button class="deleteBtn btn-flex">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="task-box">
+                        <div class="task-info">
+                            <h3 class="task-title">A demo task title</h3>
+                            <p class="task-date">17-10-2023</p>
+                            <p class="task-description">This is a task description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatem!</p>
+                        </div>
+
+                        <div class="action-btns">
+                            <button class="completedBtn btn-flex">
+                                <span class="material-symbols-outlined">check</span>
+                            </button>
+                            <button class="deleteBtn btn-flex">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-bg hide">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h3 class="form-title" contenteditable="true">Create a task</h3>
+                            <span class="material-symbols-outlined close-modal">close</span>
+                        </div>
+
+                        <form id="taskForm">
+                            <div class="input-control">
+                                <label for="titleInput">Task title:</label>
+                                <input type="text" id="titleInput">
+                            </div>
+                            <div class="input-control">
+                                <label for="dateInput">Due Date:</label>
+                                <input type="date" id="dateInput">
+                            </div>
+                            <div class="input-control">
+                                <label for="textarea">Description:</label>
+                                <textarea id="textarea" cols="30" rows="5"></textarea>
+                            </div>
+                            <button id="addTaskBtn">Done</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script src="main.js"></script> -->
+    <script src="auth.js" type="module"></script>
+
+</body>
+
+</html>
