@@ -43,17 +43,20 @@
         <div class="content">
             <div class="page-container">
                 <div class="page-header">
-                    <a class="back-btn" href="index.html">
-                        <span class="material-symbols-outlined">arrow_back</span>
-                        <!-- <span>Back</span> -->
-                    </a>
-                    <h2>My Tasklist</h2>
+                    <div class="left-side">
+                        <a class="back-btn" href="index.html">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                        </a>
+                        <h2>My Tasklist</h2>
+                    </div>
+
+                    <button onclick="showModal()" id="displayFormBtn">
+                        <span class="material-symbols-outlined">add</span>
+                        <span class="extended-text">Add a task</span>
+                    </button>
                 </div>
 
-                <div id="displayFormBtn">
-                    <span class="material-symbols-outlined">add</span>
-                    <span class="extended-text">Add a task</span>
-                </div>
+
 
                 <div id="tasks">
                     <div class="task-box">
@@ -64,10 +67,10 @@
                         </div>
 
                         <div class="action-btns">
-                            <button class="completedBtn btn-flex">
+                            <button onclick="completeTask(this)" class="completedBtn btn-flex">
                                 <span class="material-symbols-outlined">check</span>
                             </button>
-                            <button class="deleteBtn btn-flex">
+                            <button onclick="deleteTask(this)" class="deleteBtn btn-flex">
                                 <span class="material-symbols-outlined">delete</span>
                             </button>
                         </div>
@@ -76,14 +79,15 @@
                         <div class="task-info">
                             <h3 class="task-title">A demo task title</h3>
                             <p class="task-date">17-10-2023</p>
-                            <p class="task-description">This is a task description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatem!</p>
+                            <p class="task-description">This is a task description. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Deserunt, voluptatem!</p>
                         </div>
 
                         <div class="action-btns">
-                            <button class="completedBtn btn-flex">
+                            <button onclick="completeTask(this)" class="completedBtn btn-flex">
                                 <span class="material-symbols-outlined">check</span>
                             </button>
-                            <button class="deleteBtn btn-flex">
+                            <button onclick="deleteTask(this)" class="deleteBtn btn-flex">
                                 <span class="material-symbols-outlined">delete</span>
                             </button>
                         </div>
@@ -94,7 +98,7 @@
                     <div class="form-container">
                         <div class="form-header">
                             <h3 class="form-title" contenteditable="true">Create a task</h3>
-                            <span class="material-symbols-outlined close-modal">close</span>
+                            <span onclick="closeModal()" class="material-symbols-outlined close-modal">close</span>
                         </div>
 
                         <form id="taskForm">
@@ -113,6 +117,19 @@
                             <button id="addTaskBtn">Done</button>
                         </form>
                     </div>
+
+                    <div id="errorContainer">
+                        <span class="material-symbols-outlined">warning</span>
+                        <span id="errorMsg">This is an error message!</span>
+                    </div>
+                </div>
+
+                <!-- When list is empty -->
+                <div class="wrapper-container">
+                    <div class="wrapper">
+                        <img src="assets/no-task.svg" alt="no-task">
+                        <p>There are no tasks on your list!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,6 +143,7 @@
     </script>
     <!-- <script src="main.js"></script> -->
     <script src="auth.js" type="module"></script>
+    <script src="main.js"></script>
 
 </body>
 
